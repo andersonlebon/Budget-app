@@ -1,0 +1,18 @@
+<section class="new-food d-flex flex-column align-items-center justify-content-center ">
+    <h2 class="text-secondary mt-4">Add New category</h2>
+ <%= form_with(model: @category, url: { action: "create" }) do |form| %>
+    <div class="group-form">
+        <%= form.label :name %><br />
+        <%= form.text_field :name, autofocus: true, autocomplete: "name", class: "form-control"%>
+    </div>
+
+    <div class="group-form my-2">
+        <%= form.label :"icon" %><br />
+        <%= form.text_field :icon, autofocus: true, autocomplete: "measurement_unit", class: "form-control" %>
+    </div>
+
+  <%= form.submit "Add", class: "btn btn-primary my-3 align-self-end btn-submit" %>
+  </div> 
+   <% end %> 
+
+</section>

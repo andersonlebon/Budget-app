@@ -1,0 +1,11 @@
+<section>
+    <ul>
+        <% @transacs.each do |trans| %>
+            <li>
+                    <p><%= trans.amount %></p>
+                    <p><%= trans.name %></p>
+            </li>
+        <% end %>
+    </ul>
+
+</section>

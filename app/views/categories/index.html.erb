@@ -1,12 +1,10 @@
-<h1>Categories#index</h1>
-
-<% categories.each do |category| %> 
-    <%= category.name %>
-
-    <%= link_to "Show", category %>
-    <%= link_to "Edit", edit_category_path(category) %>
-    <%= link_to "Destroy", category, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <br>
-
-<% end %>
-
+<ul>
+    <% @categories.each do |category| %>
+        <li>
+            <%= link_to user_category_path(category.user, category), class: 'list-group-item' do %>
+                <p><%= category.icon %></p>
+                <p><%= category.name %></p>
+            <% end %>
+        </li>
+    <% end %>
+</ul>

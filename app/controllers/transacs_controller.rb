@@ -8,16 +8,20 @@ class TransacsController < ApplicationController
   end
 
   def new
+    @categories = current_user.categories
     @transac = current_user.categories.find(params[:category_id]).transacs.new
   end
 
   def create
-    @transac = current_user.categories.find(params[:category_id]).transacs.create(transac_params)
-    if @transac.save
-      redirect_to category_transacs_path(@transac.category_id)
-    else
-      render :new
-    end
+     @categories = current_user.categories
+    @transac = @categories.find(params[:category_id]).transacs.create(transac_params)
+    @transac.save
+    redirect_to user_category_path(current_user, params[:category_id])
+    # if @transac.save
+    #   redirect_to user_category_path(current_user, )
+    # else
+    #   render :new
+    # end
   end
 
   def destroy
@@ -25,13 +29,11 @@ class TransacsController < ApplicationController
     @transac.destroy
     redirect_to category_transacs_path(@transac.category_id)
   end
-    @transac.destroy
-    redirect_to category_transacs_path(@transac.category_id)
-  end
-
+ 
   private
 
   def transac_params
     params.require(:transac).permit(:amount, :name,  :category_id)
   end 
 end
+
