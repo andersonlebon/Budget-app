@@ -2,6 +2,6 @@
 
 class Category < ApplicationRecord
   belongs_to :user
-  has_many :transactions, dependent: :destroy
+  has_many :transacs, dependent: :destroy
   validates :name, presence: true
 end
