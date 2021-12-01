@@ -1,8 +1,7 @@
-class CreateUsers < ActiveRecord::Migration[6.1]
-  def change
-    create_table :users do |t|
+# frozen_string_literal: true
 
-      t.timestamps
-    end
+class CreateUsers < ActiveRecord::Migration[6.1] # rubocop:todo Style/Documentation
+  def change
+    create_table :users, &:timestamps
   end
 end

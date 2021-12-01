@@ -1,8 +1,7 @@
-class CreateCategories < ActiveRecord::Migration[6.1]
-  def change
-    create_table :categories do |t|
+# frozen_string_literal: true
 
-      t.timestamps
-    end
+class CreateCategories < ActiveRecord::Migration[6.1] # rubocop:todo Style/Documentation
+  def change
+    create_table :categories, &:timestamps
   end
 end

@@ -1,8 +1,7 @@
-class CreateTransactions < ActiveRecord::Migration[6.1]
-  def change
-    create_table :transactions do |t|
+# frozen_string_literal: true
 
-      t.timestamps
-    end
+class CreateTransactions < ActiveRecord::Migration[6.1] # rubocop:todo Style/Documentation
+  def change
+    create_table :transactions, &:timestamps
   end
 end
