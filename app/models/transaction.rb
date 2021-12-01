@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Transaction < ApplicationRecord
+class Transac < ApplicationRecord
   belongs_to :user
   belongs_to :category
 
