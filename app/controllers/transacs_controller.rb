@@ -1,4 +1,5 @@
 class TransacsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @transacs = current_user.categories.find(params[:category_id]).transacs
   end
