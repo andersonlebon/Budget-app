@@ -1,16 +1,23 @@
 <section class="sign-up">
   <header class="d-flex justify-content-between align-items-center bg-primary text-white">
-    <%= link_to "Back", root_path, class: "text-white"%>
+     <%= link_to root_path, class: "text-white" do %>
+     <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <%end%>
     <h2 class= "justify-self-center">Register</h2>
     <div></div>
   </header>
-  <div class="bg-secondary profile"> profile</div>
+  <div class="bg-white d-flex p-3 mt-3 pb-3 text-secondary align-items-center prof"> 
+    <div class="user">
+      <i class="fa fa-user-circle fa-4x" aria-hidden="true"></i>
+    </div>
+    <p class="mx-2">Upload Picture</p>
+  </div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.email_field :name, autofocus: true, placeholder: "Full Name", autocomplete: "name", class: ""%>
+    <%= f.text_field :name, autofocus: true, placeholder: "Full Name", autocomplete: "name", class: ""%>
   </div>
 
   <div class="field">
@@ -21,7 +28,7 @@
     <%= f.password_field :password, placeholder: "Passworld", class: "border-top border-2" %>
   </div>
 
-  <div class="actions">
+  <div class="actions btn-signup">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>

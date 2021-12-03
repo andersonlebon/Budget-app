@@ -8,6 +8,7 @@
 
 .sign-up {
   height: 100vh;
+  z-index: 1;
   header {
     padding: 10px 20px;
     height: 65px;
@@ -24,6 +25,7 @@
     background-color: transparent;
     border: none;
     padding-right: 10px;
+    z-index: 999;
     input {
       background-color: transparent;
       border: none;
@@ -60,4 +62,10 @@
 
 .profile {
   height: 80px;
+}
+.prof {
+  p {
+    padding: 0;
+    margin: 0;
+  }
 }

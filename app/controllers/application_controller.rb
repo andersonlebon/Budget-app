@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     if user_signed_in?
       super
     else
-      redirect_to root_path, notice: "Please Login to view that page!" if request.original_fullpath != root_path
+      redirect_to home_index_path, notice: "Please Login to view that page!" if request.original_fullpath != home_index_path
     end
   end
 end
