@@ -5,7 +5,7 @@ class TransacsController < ApplicationController
   end
 
   def show
-        @transacs = current_user.categories.find(params[:category_id]).transacs.find(params[:transac_id])
+        @transacs = current_user.categories.find(params[:category_id]).transacs.find(params[:id])
   end
 
   def new

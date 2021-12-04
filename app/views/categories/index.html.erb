@@ -12,26 +12,29 @@
   </header>
 
 
-<ul class="d-flex flex-column align-items-center p-2">
+<ul class="d-flex categories-ul flex-column align-items-center">
     <% @categories.each do |category| %>
-        <li class="category">
-            <%= link_to user_category_path(category.user, category), class: 'list-group-item d-flex justify-content-between align-items-center' do %>
-                <div>
-                    <p><%= category.icon %></p>
+        <li class="category ">
+            <%= link_to user_category_path(category.user, category), class: ' list-group-item d-flex justify-content-between align-items-center' do %>
+                <div class="h-100 py-2 d-flex justify-content-between align-items-center ">
+                    <img src="<%= category.icon %>" class="h-100 rounded"/>
+                    <div class="text-secondary p-2">
+                        <p class="mb-3 text-capitalize"><%= category.name %></p>
+                        <p class="smal-txt"><%= category.created_at.strftime("%d %b %Y") %> </p>
+
+                    </div>
                 </div>
-                <div>
-                    <p><%= category.name %></p>
-                </div>
-                <div>
-                $00.00
-                    <%
-=begin%>
- <p><%= category.description %></p> 
-<%
-=end%>
+                
+                <div class="fw-bold">
+                    <%= number_to_currency(category.transacs.sum(:amount))%>
                 </div>
             <% end %>
         </li>
     <% end %>
 </ul>
+
+<div class="scan">
+<%= link_to "ADD NEW CATEGORY", new_user_category_path(current_user) %>
+
+</div>
 </section>

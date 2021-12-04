@@ -6,6 +6,12 @@
     <h2 class= "justify-self-center">LOG IN</h2>
     <div></div>
   </header>
+       <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+      <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %> 
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "border-top border-2") do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>

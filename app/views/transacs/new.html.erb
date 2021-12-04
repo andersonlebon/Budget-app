@@ -1,22 +1,28 @@
-<section class="new-food d-flex flex-column align-items-center justify-content-center ">
-    <h2 class="text-secondary mt-4">Add New transacs</h2>
+<section class="sign-up">
+  <header class="d-flex mb-3 justify-content-between align-items-center bg-primary text-white">
+    <%= link_to root_path, class: "text-white" do %>
+     <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <%end%>
+    <h2 class= "justify-self-center">NEW CATEGORY</h2>
+    <div></div>
+  </header>
+
  <%= form_with(model: @transac, url: { action: "create" }) do |form| %>
-    <div class="group-form">
-        <%= form.label :name %><br />
-        <%= form.text_field :name, autofocus: true, autocomplete: "name", class: "form-control"%>
+  <div class="field">
+    <%= form.text_field :name, autofocus: true, placeholder: "Name", autocomplete: "", class: ""%>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :amount, placeholder: "Amount", class: "border-top border-2" %>
+  </div>
+
+    <div class="field">
+        <%= form.select :category_id, @categories.map { |t| [t.name, t.id]}, {}, class: 'form-control mb-3 mt-3', placeholder:'Category' %>
     </div>
 
-    <div class="group-form my-2">
-        <%= form.label :"amount" %><br />
-        <%= form.text_field :amount, autofocus: true, autocomplete: "measurement_unit", class: "form-control" %>
-    </div>
 
-     <div class="group-form my-2">
-        <%= form.select :category_id, @categories.map { |t| [t.name, t.id]}, {}, class: 'form-control mb-3 mt-3', placeholder:'Food name' %>
-    </div>
-
-  <%= form.submit "Add", class: "btn btn-primary my-3 align-self-end btn-submit" %>
-  </div> 
-   <% end %> 
-
+  <div class="actions">
+  <%= form.submit "SAVE" %>
+  </div>
+<% end %>
 </section>
