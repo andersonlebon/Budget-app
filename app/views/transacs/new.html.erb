@@ -3,9 +3,16 @@
     <%= link_to root_path, class: "text-white" do %>
      <i class="fa fa-arrow-left" aria-hidden="true"></i>
     <%end%>
-    <h2 class= "justify-self-center">NEW CATEGORY</h2>
+    <h2 class= "justify-self-center">NEW TRANSACTION</h2>
     <div></div>
   </header>
+
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+      <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %> 
 
  <%= form_with(model: @transac, url: { action: "create" }) do |form| %>
   <div class="field">
