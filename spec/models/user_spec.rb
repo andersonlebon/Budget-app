@@ -1,12 +1,15 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 # write test for all User modul methods
 RSpec.describe User, type: :model do
   # create a new user
   before(:each) do
-    @user = User.new(name: 'Test User', email: 'exemple@gmail.com', password: 'password', password_confirmation: 'password')
+    @user = User.new(name: 'Test User', email: 'exemple@gmail.com', password: 'password',
+                     password_confirmation: 'password')
   end
   it 'is valid with a name' do
-    expect(@user.name).to eq('Test User') 
+    expect(@user.name).to eq('Test User')
   end
   it 'is valid with a email' do
     expect(@user.email).to eq('exemple@gmail.com')

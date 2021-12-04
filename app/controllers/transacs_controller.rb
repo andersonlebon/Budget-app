@@ -1,11 +1,13 @@
-class TransacsController < ApplicationController
+# frozen_string_literal: true
+
+class TransacsController < ApplicationController # rubocop:todo Style/Documentation
   before_action :authenticate_user!
   def index
     @transacs = current_user.categories.find(params[:category_id]).transacs
   end
 
   def show
-        @transacs = current_user.categories.find(params[:category_id]).transacs.find(params[:id])
+    @transacs = current_user.categories.find(params[:category_id]).transacs.find(params[:id])
   end
 
   def new
@@ -14,7 +16,7 @@ class TransacsController < ApplicationController
   end
 
   def create
-     @categories = current_user.categories
+    @categories = current_user.categories
     @transac = @categories.find(params[:category_id]).transacs.create(transac_params)
     @transac.save
     redirect_to user_category_path(current_user, params[:category_id])
@@ -30,11 +32,10 @@ class TransacsController < ApplicationController
     @transac.destroy
     redirect_to category_transacs_path(@transac.category_id)
   end
- 
+
   private
 
   def transac_params
-    params.require(:transac).permit(:amount, :name,  :category_id)
-  end 
+    params.require(:transac).permit(:amount, :name, :category_id)
+  end
 end
-
