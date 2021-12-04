@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Transac < ApplicationRecord
   belongs_to :category
 

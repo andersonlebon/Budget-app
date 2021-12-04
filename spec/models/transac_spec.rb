@@ -1,8 +1,6 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 # write test for all User modul methods
-RSpec.describe Transac, type: :model do # rubocop:todo Metrics/BlockLength
+RSpec.describe Transac, type: :model do
   # create a new user
   before(:each) do
     @user = User.new(name: 'Test User', email: 'exemple@gmail.com', password: 'password',
