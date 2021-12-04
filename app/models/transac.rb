@@ -1,6 +1,6 @@
 class Transac < ApplicationRecord
   belongs_to :category
+  belongs_to :user
 
   validates :amount, presence: true
-  # has_many :categories, dependent: :destroy
 end
