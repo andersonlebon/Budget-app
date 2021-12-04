@@ -12,11 +12,13 @@ body {
 
 section {
   background-color: #ebebeb;
+
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
     width: 100%;
+
     li {
       margin: 0;
       padding: 0;
@@ -35,6 +37,7 @@ section {
     color: #434b54;
     font-size: 14px;
   }
+
   h1 {
     position: absolute;
     top: 45%;
@@ -44,6 +47,7 @@ section {
 .btn-sign-in {
   justify-self: end;
   width: 90%;
+
   a {
     color: #d1cbcb;
   }
