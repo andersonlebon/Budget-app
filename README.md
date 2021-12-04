@@ -4,11 +4,10 @@
 
 > A mobile web application where you can manage your budget
 
-Home page |
-----------|
-![Screenshot from 2021-12-04 13-28-14](https://user-images.githubusercontent.com/65068771/144707791-ac4b41f3-2af1-4945-8c65-627dc30c6fca.png)
+Home page | Categories page
+----------| ----------------
+![Screenshot from 2021-12-04 13-28-14](https://user-images.githubusercontent.com/65068771/144707791-ac4b41f3-2af1-4945-8c65-627dc30c6fca.png) | ![Screenshot from 2021-12-04 18-55-27](https://user-images.githubusercontent.com/65068771/144717824-bbf42474-08bb-4926-9a83-edbd5a967e1b.png)
 
-  
 
 A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
@@ -18,7 +17,8 @@ A mobile web application where you can manage your budget: you have a list of tr
 - PostgreSQL
 
 ## Video description
-[Loom video](https://loom.com/share/9fb0fa00b7c147ad928599dbcdf16334)
+- Explanation: [Loom video](https://loom.com/share/9fb0fa00b7c147ad928599dbcdf16334)
+- Highlight(review) : [Loom](https://www.loom.com/share/ff929bdcf9d740838e8d3b5eff1bb8be)
 
 ## Getting Started
 
