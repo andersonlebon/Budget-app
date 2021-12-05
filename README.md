@@ -15,6 +15,7 @@ A mobile web application where you can manage your budget: you have a list of tr
 
 - Ruby on Rails
 - PostgreSQL
+- Bootstrap 
 
 ## Video description
 - Explanation: [Loom video](https://loom.com/share/9fb0fa00b7c147ad928599dbcdf16334)
